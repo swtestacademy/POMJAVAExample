@@ -8,7 +8,6 @@ public class HomePage extends BasePage {
 
     //*********Constructor*********
     public HomePage (WebDriver driver, WebDriverWait wait) {
-        //BasePage'imdeki driver ve wait'imi buraya da taşımış oldum.
         super(driver, wait);
     }
 
@@ -21,16 +20,15 @@ public class HomePage extends BasePage {
 
     //*********Page Methods*********
 
-    //Anasayfayı Açma Methodu
+    //Go to Homepage
     public void goToN11 (){
         driver.get(baseURL);
         //driver.navigate().to(baseURL)
     }
 
-    //LoginSayfasına Gitme Methodu
+    //Go to LoginPage
     public void goToLoginPage (){
         click(By.className(signInButtonClass));
     }
-
 
 }

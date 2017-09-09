@@ -9,7 +9,6 @@ public class BasePage {
     public WebDriverWait wait;
 
     //Constructor
-    //Driver'ın içini dolduruyorum.
     public BasePage (WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;

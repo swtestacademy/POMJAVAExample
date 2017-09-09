@@ -12,10 +12,10 @@ public class BaseTest {
 
     @BeforeClass
     public void setup () {
-        //Driver tanımlıyorum. Her test ve page class'ı kullanacak.
+        //Create a Chrome driver. All test classes use this.
         driver = new ChromeDriver();
 
-        //Wait tanımlıyorum. Her test ve page class'ı kullanacak.
+        //Create a wait. All test classes use this.
         wait = new WebDriverWait(driver,15);
 
         //Maximize Window
