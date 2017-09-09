@@ -19,7 +19,7 @@ public class LoginTests extends BaseTest {
         HomePage homePage = new HomePage(driver,wait);
         LoginPage loginPage = new LoginPage(driver,wait);
 
-        //*************PAGE Methods********************
+        //*************PAGE METHODS********************
         //Open N11 HomePage
         homePage.goToN11();
 
@@ -40,7 +40,7 @@ public class LoginTests extends BaseTest {
         HomePage homePage = new HomePage(driver,wait);
         LoginPage loginPage = new LoginPage(driver,wait);
 
-        //*************PAGE Methods********************
+        //*************PAGE METHODS********************
         homePage.goToN11();
         homePage.goToLoginPage();
         loginPage.loginToN11("","");
