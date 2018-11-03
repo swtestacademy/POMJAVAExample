@@ -16,8 +16,8 @@ public class LoginTests extends BaseTest {
     public void invalidLoginTest_InvalidUserNameInvalidPassword () throws InterruptedException {
 
         //*************PAGE INSTANTIATIONS*************
-        HomePage homePage = new HomePage(driver,wait);
-        LoginPage loginPage = new LoginPage(driver,wait);
+        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(driver);
 
         //*************PAGE METHODS********************
         //Open N11 HomePage
@@ -37,8 +37,8 @@ public class LoginTests extends BaseTest {
     @Test (priority = 1)
     public void invalidLoginTest_EmptyUserEmptyPassword () throws InterruptedException {
         //*************PAGE INSTANTIATIONS*************
-        HomePage homePage = new HomePage(driver,wait);
-        LoginPage loginPage = new LoginPage(driver,wait);
+        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(driver);
 
         //*************PAGE METHODS********************
         homePage.goToN11();
@@ -50,5 +50,4 @@ public class LoginTests extends BaseTest {
         loginPage.verifyLoginUserName("Lütfen e-posta adresinizi girin.");
         loginPage.verifyLoginPassword("Bu alanın doldurulması zorunludur.");
     }
-
 }

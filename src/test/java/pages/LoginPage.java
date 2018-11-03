@@ -8,36 +8,36 @@ import org.testng.Assert;
 public class LoginPage extends BasePage{
 
     //*********Constructor*********
-    public LoginPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public LoginPage(WebDriver driver) {
+        super(driver);
     }
 
     //*********Web Elements*********
-    String usenameId = "email";
-    String passwordId = "password";
-    String loginButtonId = "loginButton";
-    String errorMessageUsernameXpath = "//*[@id=\"loginForm\"]/div[1]/div/div";
-    String errorMessagePasswordXpath = "//*[@id=\"loginForm\"]/div[2]/div/div ";
+    By usernameBy = By.id("email");
+    By passwordBy = By.id("password");
+    By loginButtonBy = By.id("loginButton");
+    By errorMessageUsernameBy = By.xpath("//*[@id=\"loginForm\"]/div[1]/div/div");
+    By errorMessagePasswordBy = By.xpath("//*[@id=\"loginForm\"]/div[2]/div/div ");
 
     //*********Page Methods*********
 
     public void loginToN11 (String username, String password){
         //Enter Username(Email)
-        writeText(By.id(usenameId),username);
+        writeText(usernameBy,username);
         //Enter Password
-        writeText(By.id(passwordId), password);
+        writeText(passwordBy, password);
         //Click Login Button
-        click(By.id(loginButtonId));
+        click(loginButtonBy);
     }
 
     //Verify Username Condition
     public void verifyLoginUserName (String expectedText) {
-        Assert.assertEquals(readText(By.xpath(errorMessageUsernameXpath)), expectedText);
+        Assert.assertEquals(readText(errorMessageUsernameBy), expectedText);
     }
 
     //Verify Password Condition
     public void verifyLoginPassword (String expectedText) {
-        Assert.assertEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
+        Assert.assertEquals(readText(errorMessagePasswordBy), expectedText);
     }
 
 }
