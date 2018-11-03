@@ -21,23 +21,26 @@ public class LoginPage extends BasePage{
 
     //*********Page Methods*********
 
-    public void loginToN11 (String username, String password){
+    public LoginPage loginToN11 (String username, String password){
         //Enter Username(Email)
         writeText(usernameBy,username);
         //Enter Password
         writeText(passwordBy, password);
         //Click Login Button
         click(loginButtonBy);
+        return this;
     }
 
     //Verify Username Condition
-    public void verifyLoginUserName (String expectedText) {
-        Assert.assertEquals(readText(errorMessageUsernameBy), expectedText);
+    public LoginPage verifyLoginUserName (String expectedText) {
+        assertEquals(errorMessageUsernameBy, expectedText);
+        return this;
     }
 
     //Verify Password Condition
-    public void verifyLoginPassword (String expectedText) {
-        Assert.assertEquals(readText(errorMessagePasswordBy), expectedText);
+    public LoginPage verifyLoginPassword (String expectedText) {
+        assertEquals(errorMessagePasswordBy, expectedText);
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import sun.rmi.runtime.Log;
 
 public class HomePage extends BasePage {
 
@@ -19,15 +20,16 @@ public class HomePage extends BasePage {
 
 
     //*********Page Methods*********
-
     //Go to Homepage
-    public void goToN11 (){
+    public HomePage goToN11 (){
         driver.get(baseURL);
+        return this;
     }
 
     //Go to LoginPage
-    public void goToLoginPage (){
+    public LoginPage goToLoginPage (){
         click(signInButtonBy);
+        return new LoginPage(driver);
     }
 
 }
