@@ -12,7 +12,6 @@ public class LoginTests extends BaseTest {
         HomePage homePage = new HomePage(driver);
 
         //*************PAGE METHODS********************
-        //Open N11 HomePage
         homePage.goToN11()
                 .goToLoginPage()
                 .loginToN11("onur@swtestacademy.com", "11223344")
