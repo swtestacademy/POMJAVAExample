@@ -42,5 +42,4 @@ public class LoginPage extends BasePage{
         assertEquals(errorMessagePasswordBy, expectedText);
         return this;
     }
-
 }
